@@ -1,11 +1,12 @@
 package poppop.oauth.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import poppop.oauth.dto.UserDTO;
 import poppop.oauth.service.UserService;
 
-@RestController
+@Controller
 @RequiredArgsConstructor
 public class JoinController {
 
@@ -19,7 +20,7 @@ public class JoinController {
 
     @PostMapping("/join")
     @ResponseBody
-    public String join(@RequestBody UserDTO dto) {
+    public String join(UserDTO dto) {
 
         userService.join(dto);
 
