@@ -15,14 +15,6 @@ public class UserService {
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public void join(UserDTO userDTO){
-        userEntityRepository.save(
-                UserEntity.builder()
-                        .username(userDTO.getUsername())
-                        .password(userDTO.getPassword())
-                        .role("Role_ADMIN")
-                        .nickname(userDTO.getNickname())
-                        .phone(userDTO.getPhone())
-                        .build()
-        );
+        userEntityRepository.save(userDTO.toEntity());
     }
 }
