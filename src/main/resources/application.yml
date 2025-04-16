@@ -14,3 +14,7 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  mustache:
+    prefix: classpath:/templates/
+    suffix: .mustache
+    enabled: true
