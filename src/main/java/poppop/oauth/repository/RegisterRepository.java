@@ -5,6 +5,6 @@ import poppop.oauth.entity.RegisterEntity;
 
 import java.util.Optional;
 
-public interface RegisterEntityRepository extends JpaRepository<RegisterEntity, Long> {
+public interface RegisterRepository extends JpaRepository<RegisterEntity, Long> {
     Optional<RegisterEntity> findByClientId(String clientId);
 }
